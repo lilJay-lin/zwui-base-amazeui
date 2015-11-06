@@ -1,0 +1,32 @@
+<h1 id="image">Image</h1>
+<hr>
+<p>定义图片样式。</p>
+<h2 id="-">基础样式</h2>
+<p>基础样式定义在 <code>base</code> 中。</p>
+<pre><code class="lang-css">img {
+  box-sizing: border-box;
+  width:100%;
+  vertical-align: middle;
+  border: 0;
+}
+</code></pre>
+<h2 id="-">增强样式</h2>
+<h3 id="-">圆角样式</h3>
+<p>为<code>&lt;img&gt;</code>元素设置不同的 class，增强其样式。</p>
+<ul>
+<li><code>.zw-radius</code>     圆角</li>
+<li><code>.zw-round</code>      椭圆</li>
+<li><code>.zw-circle</code>     圆形，一般用于正方形的图片(你要觉得椭圆好看，用在长方形上也可以)</li>
+</ul>
+<pre><code class="lang-html">&lt;p&gt;&lt;img class=&quot;zw-radius&quot; alt=&quot;140*140&quot; src=&quot;http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80&quot; width=&quot;140&quot; height=&quot;140&quot; /&gt;
+&lt;img class=&quot;zw-round&quot; alt=&quot;140*140&quot; src=&quot;http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/600/q/80&quot; width=&quot;200&quot; height=&quot;120&quot;/&gt;
+&lt;img class=&quot;zw-circle&quot; src=&quot;http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80&quot; width=&quot;140&quot; height=&quot;140&quot;/&gt;&lt;/p&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;p&gt;
+  &lt;img class=&quot;zw-radius&quot; alt=&quot;140*140&quot; src=&quot;http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80&quot; width=&quot;140&quot; height=&quot;140&quot; /&gt;
+
+  &lt;img class=&quot;zw-round&quot; alt=&quot;140*140&quot; src=&quot;http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/600/q/80&quot; width=&quot;200&quot; height=&quot;120&quot;/&gt;
+
+  &lt;img class=&quot;zw-circle&quot; src=&quot;http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80&quot; width=&quot;140&quot; height=&quot;140&quot;/&gt;
+&lt;/p&gt;
+</code></pre>

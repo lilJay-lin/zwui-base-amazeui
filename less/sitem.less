@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Component: sitem
+
+    水平滑动item组合，订制的item项目
+ ============================================================================ */
+@sitem-width: 2.5rem;
+@sitem-padding-top: 0.2rem;
+@sitem-padding-left: 0.15rem;
+
+@item-title-color: @global-font-color;
+@item-title-size:@font-size-xl;
+@item-title-margin-top: 0.16rem;
+@item-title-margin-bottom: 0.06rem;
+
+
+@item-text-size:@font-size-xs;
+@item-text-color: #aaaaaa;
+@item-text-line-height: 1.5;
+@item-text-margin-top:0;
+@item-text-margin-bottom:0.2rem;
+@item-text-margin:0.1rem;
+@item-text-line-clamp: 2;
+
+.@{ns}sitem{
+  line-height: 1;
+  width: 2.5rem;
+  text-align: left;
+  padding-top: @sitem-padding-top;
+  padding-left: @sitem-padding-left;
+
+  & .@{ns}img-square{
+    padding-top: 0.05rem;
+    width:1.3rem;
+    height:1.3rem;
+  }
+}
+.@{ns}sitem-center{
+  text-align: center;
+}
+
+.@{ns}sitem-title{
+  font-size:@item-title-size;
+  color:@item-title-color;
+  margin-top:@item-title-margin-top;
+  margin-bottom:@item-title-margin-bottom;
+  vertical-align: middle;
+  .text-overflow();
+}
+
+.@{ns}sitem-text{
+  text-align: left;
+  font-size: @item-text-size;
+  color: @item-text-color;
+  line-height: @item-text-line-height;
+  max-height: @item-text-line-height * @item-text-size *@item-text-line-clamp;
+  margin:0;
+  .am-line-clamp(@item-text-line-clamp, @item-text-line-height);
+}

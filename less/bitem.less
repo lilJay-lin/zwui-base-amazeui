@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Component: bigitem
+
+   带全屏大图的item
+ ============================================================================ */
+@bitem-bg: #fff;
+@item-border: @global-border;
+@bitem-padding-top:0.25rem;
+@bitem-padding-bottom:0.35rem;
+@bitem-padding-lr:0.15rem;
+@bitem-line-height: 1.4;
+
+@bitem-info-margin-top:0.15rem;
+@bitem-info-margin-bottom: 0.1rem;
+
+@bitem-tit-line-height: @bitem-line-height;
+@bitem-tit-font-size: @font-size-xl;
+@bitem-tit-font-color: @global-font-color;
+
+@bitem-desc-line-height:@bitem-line-height;
+@bitem-desc-font-color:#aaaaaa;
+@bitem-desc-font-size:@font-size-xs;
+@bitem-desc-line-camp:3;
+
+@bitem-btn-wrap-margin-top: 0.05rem;
+@bitem-btn-wrap-margin-left: 0.35rem;
+
+.@{ns}bitem{
+  border:1px solid @item-border;
+  background:@bitem-bg;
+  padding: @bitem-padding-top @bitem-padding-lr @bitem-padding-bottom;
+
+
+  & .@{ns}btn-wrap{
+    padding-left:@bitem-btn-wrap-margin-left;
+    padding-top:@bitem-btn-wrap-margin-top;
+  }
+}
+
+.@{ns}bitem-info{
+  display: flex;
+  margin: @bitem-info-margin-top 0 @bitem-info-margin-bottom;
+}
+.@{ns}bitem-title{
+  font-size:@bitem-tit-font-size;
+  color:@bitem-tit-font-color;
+  line-height: @bitem-tit-line-height;
+  flex:1;
+}
+
+.@{ns}bitem-desc{
+  margin:0;
+  font-size:@bitem-desc-font-size;
+  color:@bitem-desc-font-color;
+  line-height: @bitem-desc-line-height;
+  .am-line-clamp(@bitem-desc-line-camp, @bitem-desc-line-height);
+}

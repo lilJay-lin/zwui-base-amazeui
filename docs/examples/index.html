@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/zwui.min.css"/>
+    <script src="vendor/jquery.min.js"></script>
+    <script src="assets/js/zwui.min.js"></script>
+    <style>
+        body{
+            background:#ececec;
+        }
+    </style>
+</head>
+<body>
+    <!--
+       按钮
+
+       字体：
+       @font-size-xs:            0.22rem;
+        @font-size-sm:            0.24rem;
+        @global-font-size:     0.26rem;
+        @font-size-lg:            0.28rem;
+        @font-size-xl:            0.30rem;
+        @font-size-xxl:           0.34rem;
+    -->
+    <p>======字体大小</p>
+    <p class="zw-text-xs">class="zw-text-xs"字体 22</p>
+    <p class="zw-text-sm">class="zw-text-sm"字体 24</p>
+    <p >默认字体 26</p>
+    <p  class="zw-text-lg">class="zw-text-lg"字体 28</p>
+    <p  class="zw-text-xl">class="zw-text-xl"字体 30</p>
+    <p  class="zw-text-xxl">class="zw-text-xxl"默认字体 34</p>
+
+    <p>======按钮class="zw-btn"</p>
+    <p>1. 默认按钮加class="zw-btn-default"</p>
+    <div class="zw-btn zw-btn-default">下载</div>
+
+    <p>2.按钮调整字体大小加class="zw-btn-*"  *取值xs sm lg xl</p>
+    <div class="zw-btn zw-btn-default zw-btn-xxl">下载</div>
+
+    <p>3. 满屏按钮增加class="zw-btn-block"</p>
+    <div class="zw-btn zw-btn-default zw-btn-block ">下载</div>
+
+    <p>======选项卡==</p>
+
+    <div data-zw-widget= "tabs" data-tabs="{defaultActiveIndex: 3}"
+         class="zw-tabs">
+        <ul class="zw-tabs-nav ">
+            <li  ><a href="javascript:;">青春</a></li>
+            <li ><a href="javascript:;">彩虹</a></li>
+            <li class=""><a href="javascript:;">歌唱</a></li>
+        </ul>
+        <div class="zw-tabs-bd">
+            <div class="zw-tab-panel">
+                【青春】那时候有多好，任雨打湿裙角。忍不住哼起，心爱的旋律。绿油油的树叶，自由地在说笑。燕子忙归巢，风铃在舞蹈。经过青春的草地，彩虹忽然升起。即使视线渐渐模糊，它也在我心里。就像爱过的旋律，没人能抹去。因为生命存在失望，歌唱，所以才要歌唱。
+            </div>
+            <div class="zw-tab-panel ">
+                【彩虹】那时候有多好，任雨打湿裙角。忍不住哼起，心爱的旋律。绿油油的树叶，自由地在说笑。燕子忙归巢，风铃在舞蹈。经过青春的草地，彩虹忽然升起。即使视线渐渐模糊，它也在我心里。就像爱过的旋律，没人能抹去。因为生命存在失望，歌唱，所以才要歌唱。
+            </div>
+            <div class="zw-tab-panel ">
+                【歌唱】那时候有多好，任雨打湿裙角。忍不住哼起，心爱的旋律。绿油油的树叶，自由地在说笑。燕子忙归巢，风铃在舞蹈。经过青春的草地，彩虹忽然升起。即使视线渐渐模糊，它也在我心里。就像爱过的旋律，没人能抹去。因为生命存在失望，歌唱，所以才要歌唱。
+            </div>
+        </div>
+    </div>
+
+    <p>========轮播组件</p>
+    <div data-zw-widget="slider" class="zw-slider" data-slider="{auto:true}" >
+        <div class="zw-viewport">
+            <ul class="zw-sliders"  data-zw-widget="imagescale" data-scale="{radio:0.431}">
+                <li >
+                    <img src="assets/img/9.png" class="zw-img-full"/>
+                </li>
+                <li>
+                    <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" class="zw-img-full"/>
+                </li>
+                <li>
+                    <img src="http://s.amazeui.org/media/i/demos/bing-2.jpg" class="zw-img-full"/>
+
+                </li>
+                <li>
+                    <img src="http://s.amazeui.org/media/i/demos/bing-3.jpg"  class="zw-img-full"/>
+
+                </li>
+                <li>
+                    <img src="http://s.amazeui.org/media/i/demos/bing-4.jpg" class="zw-img-full"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <p>========列表</p>
+
+    <p>=======水平滑动列表</p>
+    <div data-zw-widget="scroll" class="zw-scroll" style="height:3.1rem;" data-scroll="{filterWidth:0.6}">
+        <div class="zw-viewport">
+            <div class="zw-scroll-filter">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAADOCAYAAACZ8ZS/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MUZEMjFCQzU4NDQ5MTFFNUE3NzY5MjY0MTcwMDM1Q0EiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MUZEMjFCQzY4NDQ5MTFFNUE3NzY5MjY0MTcwMDM1Q0EiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxRkQyMUJDMzg0NDkxMUU1QTc3NjkyNjQxNzAwMzVDQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxRkQyMUJDNDg0NDkxMUU1QTc3NjkyNjQxNzAwMzVDQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsfW+zsAAAESSURBVHja7NABAQAwCAOg+/7R7DQjGECIQCXpx+orECVKlChRohAlSpQoUaJEIUqUKFGiRCFKlChRokSJQpQoUaJEiRKFKFGiRIkShShRokSJEiUKUaJEiRIlClGiRIkSJUoUokSJEiVKlChEiRIlSpQoRIkSJUqUKFGIEiVKlChRohSIEiVKlChRiBIlSpQoUaIQJUqUKFGiECVKlChRokQhSpQoUaJEiUKUKFGiRIlClChRokSJEoUoUaJEiRKFKFGiRIkSJQpRokSJEiVKFKJEiRIlShSiRIkSJUqUKESJEiVKlChRCkSJEiVKlChEiRIlSpQoUYgSJUqUKFGIEiVKlChRohAlSpQoUaJuGwEGABX8BWWoc/AMAAAAAElFTkSuQmCC" alt=""/>
+            </div>
+            <div class="zw-scrolls">
+                <div class="zw-scroll-item  zw-sitem zw-sitem-center">
+                    <img src="./assets/img/1.png" class="zw-img-square"/>
+                    <p class="zw-sitem-title">绝世唐门</p>
+                    <p class="zw-sitem-text">无能为力，大圣落,玩在掌上的游无能玩在掌上的游无能玩在掌上的游无能玩在掌上的游无能</p>
+                </div>
+
+                <div class="zw-scroll-item zw-sitem zw-sitem-center">
+                    <img src="./assets/img/8.png"  class="zw-img-square"/>
+                    <p class="zw-sitem-title">绝世唐门绝世唐门绝世唐门</p>
+                    <p class="zw-sitem-text">无能为力，大圣落,玩在掌上的游玩在掌上的游无能玩在掌上的游无能</p>
+                </div>
+                <div class="zw-scroll-item  zw-sitem zw-sitem-center">
+                    <img src="./assets/img/7.png"  class="zw-img-square"/>
+                    <p class="zw-sitem-title">绝世唐门绝世唐门绝世唐门</p>
+                    <p class="zw-sitem-text">无能为力，大圣落,玩在掌上的游玩在掌上的游无能玩在掌上的游无能</p>
+                </div>
+                <div class="zw-scroll-item  zw-sitem zw-sitem-center">
+                    <img src="./assets/img/8.png"   class="zw-img-square"/>
+                    <p class="zw-sitem-title">绝世唐门绝世唐门绝世唐门</p>
+                    <p class="zw-sitem-text">无能为力，大圣落,玩在掌上的游</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+
+    <div data-zw-widget="scroll" class="zw-scroll" style="height:3.1rem;">
+        <div class="zw-viewport">
+            <div class="zw-scroll-filter"></div>
+            <div class="zw-scrolls">
+                <div class="zw-scroll-item  zw-sitem">
+                    <img src="./assets/img/1.png" data-zw-widget="imagescale" data-scale="{radio:0.6}"/>
+                    <p class="zw-sitem-title">绝世唐门绝世唐门绝世唐门</p>
+                    <p class="zw-sitem-text">无能为力，大圣落,玩在掌上的游无能玩在掌上的游无能玩在掌上的游无能玩在掌上的游无能</p>
+                </div>
+
+                <div class="zw-scroll-item zw-sitem">
+                    <img src="./assets/img/8.png"  data-zw-widget="imagescale" data-scale="{radio:0.6}"/>
+                    <p class="zw-sitem-title">绝世唐门绝世唐门绝世唐门</p>
+                    <p class="zw-sitem-text">无能为力，大圣落,玩在掌上的游玩在掌上的游无能玩在掌上的游无能</p>
+                </div>
+                <div class="zw-scroll-item  zw-sitem">
+                    <img src="./assets/img/7.png" data-zw-widget="imagescale" data-scale="{radio:0.6}"/>
+                    <p class="zw-sitem-title">绝世唐门绝世唐门绝世唐门</p>
+                    <p class="zw-sitem-text">无能为力，大圣落,玩在掌上的游玩在掌上的游无能玩在掌上的游无能</p>
+                </div>
+                <div class="zw-scroll-item  zw-sitem "/>
+                    <img src="./assets/img/8.png"  data-zw-widget="imagescale" data-scale="{radio:0.6}"/>
+                    <p class="zw-sitem-title">绝世唐门绝世唐门绝世唐门</p>
+                    <p class="zw-sitem-text">无能为力，大圣落,玩在掌上的游</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <p>=======带大图列表</p>
+        <div class="zw-bitem">
+            <img data-zw-widget="imagescale"  data-scale="{radio:0.54}"  src="./assets/img/6.png" alt=""/>
+            <div class="zw-bitem-info">
+                <div class="zw-bitem-title">
+                    3D技术绝佳的国产动画，孙悟空的新动 漫形象也很惊喜。
+                </div>
+                <div class="zw-btn-wrap">
+                    <span class="zw-btn zw-btn-default">下载</span>
+                </div>
+            </div>
+            <p class="zw-bitem-desc">
+                冰蓝深海，猴子沉入水底。无能为力，大圣落魄，剥除齐天之名，只是区区一介石头蹦出的普通猴子罢了。而眼前浮现那颗毛茸茸的圆光头，乌而眼前浮现那颗毛茸茸的圆光头，乌只是区区一介石头蹦出的普通猴子罢了。而眼前浮现那颗毛茸茸的圆光头，乌而眼前浮现那颗毛茸茸的圆光头，乌只是区区一介石头蹦出的普通猴子罢了。而眼前浮现那颗毛茸茸的圆光头，乌而眼前浮现那颗毛茸茸的圆光头，乌只是区区一介石头蹦出的普通猴子罢了。而眼前浮现那颗毛茸茸的圆光头，乌而眼前浮现那颗毛茸茸的圆光头，乌
+            </p>
+        </div>
+
+    <p>=====单列</p>
+
+    <div class="zw-items  zw-items-1">
+        <div class="zw-item ">
+            <div class="zw-item-logo">
+                <img src="./assets/img/3.png" class="zw-item-video"/>
+            </div>
+            <div class="zw-item-info">
+                <p class="zw-item-title">神偷波比2</p>
+                <p class="zw-item-tip"><span>1000万+感兴趣</span><em>7.01M</em></p>
+                <p class="zw-item-text">无能为力，大圣落魄，剥除齐天之国民手游经典卡牌,玩在掌上的游戏而眼前浮现那茸的头无能为力，大圣落魄，剥除齐天之国民手游经典卡牌,玩在掌上的游</p></p>
+            </div>
+            <div class="zw-btn-wrap">
+                <span class="zw-btn zw-btn-default">下载</span>
+            </div>
+        </div>
+        <div class="zw-item ">
+            <div class="zw-item-logo">
+                <img src="./assets/img/4.png" class="zw-item-book"/>
+            </div>
+            <div class="zw-item-info">
+                <p class="zw-item-title">神偷波比2</p>
+                <p class="zw-item-tip"><span>1000万+感兴趣</span><em>7.01M</em></p>
+                <p class="zw-item-text">无能为力，大圣落魄，剥除齐天之国民手游经典卡牌,玩在掌上的游戏而眼前浮现那茸的头无能为力，大圣落魄，剥除齐天之国民手游经典卡牌,玩在掌上的游</p></p>
+            </div>
+            <div class="zw-btn-wrap">
+                <span class="zw-btn zw-btn-default">下载</span>
+            </div>
+        </div>
+        <div class="zw-item ">
+            <div class="zw-item-logo">
+                <img src="./assets/img/5.png" class="zw-item-app"/>
+            </div>
+            <div class="zw-item-info">
+                <p class="zw-item-title">神偷波比2</p>
+                <p class="zw-item-tip"><span>1000万+感兴趣</span><em>7.01M</em></p>
+                <p class="zw-item-text">无能为力，大圣落魄，剥除齐天之国民手游经典卡牌,玩在掌上的游戏而眼前浮现那茸的头无能为力，大圣落魄，剥除齐天之国民手游经典卡牌,玩在掌上的游</p></p>
+            </div>
+            <div class="zw-btn-wrap">
+                <span class="zw-btn zw-btn-default">下载</span>
+            </div>
+        </div>
+    </div>
+
+    <p>=====2列</p>
+    <div class="zw-items  zw-items-2">
+        <div class="zw-item ">
+            <img src="./assets/img/1.png" data-zw-widget="imagescale" data-scale="{radio:0.5}" />
+            <p class="zw-item-title">绝世唐门</p>
+            <p class="zw-item-text ">无能为力，大圣落魄，剥除齐天之国民手游经典卡牌,玩在掌上的游戏而眼前浮现那茸的头无能为力，大圣落魄，剥除齐天之国民手游经典卡牌,玩在掌上的游</p>
+            <span class="zw-btn zw-btn-default">下载</span>
+        </div>
+        <div class="zw-item">
+            <img src="./assets/img/2.png"  data-zw-widget="imagescale" data-scale="{radio:0.5}" />
+            <p class="zw-item-title">绝世唐门绝世唐门绝世唐门</p>
+            <p class="zw-item-text">无能为力，大圣落,玩在掌上的游</p>
+            <span class="zw-btn zw-btn-default">下载玩在掌上的游的游</span>
+        </div>
+    </div>
+    <div class="zw-items  zw-items-2">
+        <div class="zw-item ">
+            <img src="./assets/img/1.png" class="zw-img-square"/>
+            <p class="zw-item-title">绝世唐门</p>
+            <p class="zw-item-text">无能为力，大圣落魄，剥除齐天之国民手游经典卡牌,玩在掌上的游戏而眼前浮现那茸的头无能为力，大圣落魄，剥除齐天之国民手游经典卡牌,玩在掌上的游</p>
+            <span class="zw-btn zw-btn-default ">下载</span>
+        </div>
+        <div class="zw-item">
+            <img src="./assets/img/2.png" class="zw-img-square"/>
+            <p class="zw-item-title">绝世唐门绝世唐门绝世唐门绝世唐门</p>
+            <p class="zw-item-text">无能为力，大圣落魄，剥除齐天之国民手游经典卡牌,玩在掌上的游戏而眼前浮现那茸的头无能为力，大圣落魄，剥除齐天之国民手游经典卡牌,玩在掌上的游</p>
+            <span class="zw-btn zw-btn-default ">下载</span>
+        </div>
+    </div>
+    <p>=====3列</p>
+    <div class="zw-items  zw-items-3">
+        <div class="zw-item">
+            <img src="./assets/img/1.png"  data-zw-widget="imagescale" data-scale="{radio:0.5}"/>
+            <p class="zw-item-title">绝世唐门</p>
+            <span class="zw-btn zw-btn-default ">下载</span>
+        </div>
+        <div class="zw-item">
+            <img src="./assets/img/2.png"  data-zw-widget="imagescale" data-scale="{radio:0.5}"/>
+            <p class="zw-item-title">绝世唐门绝世唐门绝世唐门</p>
+            <span class="zw-btn zw-btn-default ">下载</span>
+        </div>
+        <div class="zw-item">
+            <img src="./assets/img/2.png"  data-zw-widget="imagescale" data-scale="{radio:0.5}"/>
+            <p class="zw-item-title">绝世唐门</p>
+            <span class="zw-btn zw-btn-default ">下载</span>
+        </div>
+    </div>
+    <div class="zw-items  zw-items-3">
+        <div class="zw-item ">
+            <img src="./assets/img/1.png" class="zw-img-square"/>
+            <p class="zw-item-title">绝世唐门</p>
+            <span class="zw-btn zw-btn-default ">下载</span>
+        </div>
+        <div class="zw-item">
+            <img src="./assets/img/2.png" class="zw-img-square"/>
+            <p class="zw-item-title">绝世唐门</p>
+            <span class="zw-btn zw-btn-default ">下载</span>
+        </div>
+        <div class="zw-item">
+            <img src="./assets/img/2.png" class="zw-img-square"/>
+            <p class="zw-item-title">绝世唐门</p>
+            <span class="zw-btn zw-btn-default ">绝世唐门</span>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <!--grid-->
+<!--
+    <div class="test-grid">
+        <div class="zw-g ">
+            <div class="zw-u-sm-4">
+                <div class="zw-u-sm-2">
+                    2
+                </div>
+                <div class="zw-u-sm-10">10</div>
+            </div>
+            <div class="zw-u-sm-8">8</div>
+        </div>
+
+        <div class="zw-g doc-zw-g">
+            <div class="zw-u-sm-6 zw-u-md-4 zw-u-lg-3">sm-6 md-4 lg-3</div>
+            <div class="zw-u-sm-6 zw-u-md-8 zw-u-lg-9">sm-6 md-8 lg-9</div>
+        </div>
+
+    </div>-->
+
+    <!--等分网格-->
+<!--    <ul class="zw-avg-sm-2">
+        <li>1</li>
+        <li>2</li>
+    </ul>-->
+
+    <!--帮助类-->
+
+    <!--文字大小,颜色-->
+<!--    <div>
+        <p class="zw-text-sm zw-text-primary">primary</p>
+        <p class="zw-text-lg zw-text-success">success</p>
+        <p class="zw-text-sm zw-text-warning">warning</p>
+        <p class="zw-text-xl zw-text-danger">primary</p>
+        <p class="zw-text-xxl zw-text-secondary">primary</p>
+    </div>-->
+
+    <!-- 垂直居中 or 垂直底部-->
+<!--    <div class="zw-vertical-align" style="border:1px solid #66b8da;height: 150px;">
+        <span  class="zw-vertical-align-bottom" style="font-size:18px">
+            文字底部对齐
+        </span>
+        <span class="zw-vertical-align-middle zw-radius" style="display: inline-block;width:30px;height:30px;background:chartreuse"></span>
+        <div class="zw-vertical-align-middle">
+            飘在半空中的 XX
+        </div>
+    </div>-->
+</body>
+<!--<script>
+    window.onload = function(){
+        var $dummy, root = null;
+        if(!root){
+            $dummy = $('<div style="font-size:1rem"/>');
+            $(document.body).append($dummy);
+            root = $dummy[0];
+        }
+        var fontSize = parseInt(window.getComputedStyle(root).fontSize);
+
+        $dummy && ($dummy.remove());
+        console.log (isNaN(fontSize)? 10 : fontSize);
+    }
+</script>-->
+</html>

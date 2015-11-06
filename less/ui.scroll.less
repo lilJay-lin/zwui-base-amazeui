@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Component: Scroll Plugin
+   图片水平滑动组合
+ ============================================================================ */
+
+@scroll-bg:#fff;
+@scroll-border-color:@global-border;
+
+.@{ns}scroll{
+  background: @scroll-bg;
+  border:1px solid @scroll-border-color;
+
+  .@{ns}viewport{
+      position: relative;
+      overflow: hidden;
+  }
+}
+
+.@{ns}scroll-filter{
+  position: absolute;
+  z-index: 2;
+  top:0;
+  right:0;
+  width: 0.6rem;
+  height:100%;
+  //background: rgba(255, 255, 255, 0.8);
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.@{ns}scrolls{
+  //display: none;
+  backface-visibility: hidden;
+  visibility: hidden;
+}
+
+.@{ns}scroll-item{
+    position: relative;
+    //width:100%;
+}

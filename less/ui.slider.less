@@ -1,0 +1,103 @@
+// Name:            Tabs
+//
+// Description:     Define style for Tabs Plugin
+//
+// Component:       `.@{ns}slider`
+//
+// Sub-objects:     `.@{ns}slider-viewport`
+//                  `.@{ns}sliders`
+//                  `.@{ns}direction-nav`
+//
+// States:          `.@{ns}active-slider`
+//
+//
+// =============================================================================
+
+
+/* ==========================================================================
+   Component: Tabs Plugin
+ ============================================================================ */
+
+/* Control Nav */
+@control-nav-bg-color: #ececec;
+@control-nav-active-bg-color: #ffcc66;
+
+.@{ns}slider{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width:100%;
+  background-color:#fff;
+  border-radius:2px;
+  a:hover,
+  a:focus{
+    outline: none;
+  }
+
+  .@{ns}viewport{
+      overflow:hidden;
+      width:100%;
+      position: relative;
+  }
+}
+
+.@{ns}sliders,
+.@{ns}direction-nav {
+  margin: 0;
+  padding: 0;
+  width:100%;
+  list-style: none;
+}
+
+.@{ns}sliders{
+  .clearfix();
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0s ease-in;
+
+  > li {
+      //display: none;
+      visibility: hidden;
+      height: 100%;
+      width:100%;
+      float:left;
+      position: relative;
+  }
+}
+
+
+
+
+.@{ns}control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  padding:0;
+  margin:0;
+  li {
+    margin: 0 6px;
+    display: inline-block;
+    a {
+      width: 12px;
+      height: 12px;
+      display: block;
+      background-color: @control-nav-bg-color;
+      line-height: 0;
+      font-size: 0;
+      cursor: pointer;
+      text-indent: -9999px;
+      border-radius: 20px;
+      box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+
+      &:hover {
+        background-color: @control-nav-bg-color;
+      }
+      &.@{ns}active {
+        background-color: #000;
+        background-color: @control-nav-active-bg-color;
+        cursor: default;
+      }
+    }
+  }
+}

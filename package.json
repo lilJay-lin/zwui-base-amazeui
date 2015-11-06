@@ -1,0 +1,67 @@
+{
+  "name": "zwui-base-amazeui",
+  "version": "1.0.0",
+  "description": "zwui base on boostrap and amazeui",
+  "main": "zw.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "liljay-lin",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^1.11.3"
+  },
+  "devDependencies": {
+    "bistre": "^1.0.1",
+    "body-parser": "^1.13.1",
+    "browser-sync": "^2.9.11",
+    "browserify": "^11.0.0",
+    "browserify-derequire": "^0.9.4",
+    "browserify-shim": "^3.8.10",
+    "bundle-collapser": "^1.2.0",
+    "cookie-parser": "^1.3.5",
+    "debug": "^2.2.0",
+    "del": "^1.2.0",
+    "derequire": "^2.0.0",
+    "errorhandler": "^1.3.6",
+    "express": "^4.13.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.0",
+    "gulp-concat": "latest",
+    "gulp-header": "^1.2.2",
+    "gulp-less": "^3.0.3",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-marked": "^1.0.0",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-nodemon": "^2.0.3",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "gulp-size": "^1.2.1",
+    "gulp-uglify": "latest",
+    "gulp-util": "^3.0.4",
+    "gulp-webpack": "^1.5.0",
+    "gulp-zip": "^3.0.2",
+    "handlebars": "^3.0.3",
+    "hbs": "^3.0.1",
+    "jest-cli": "^0.6.1",
+    "less-middleware": "^2.0.1",
+    "lodash": "^3.9.3",
+    "morgan": "^1.6.1",
+    "run-sequence": "^1.1.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  },
+  "jest": {
+    "rootDir": "./jest"
+  }
+}

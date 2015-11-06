@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/zwui.min.css"/>
+    <script src="vendor/jquery.min.js"></script>
+    <script src="assets/js/zwui.min.js"></script>
+    <style>
+        body{
+            background:#ececec;
+        }
+    </style>
+</head>
+<body>
+<p>=====3列</p>
+<div class="zw-items  zw-items-3">
+    <div class="zw-item">
+        <img src="./assets/img/1.png"  />
+        <p class="zw-item-title">绝世唐门</p>
+        <span class="zw-btn zw-btn-default ">下载</span>
+    </div>
+    <div class="zw-item">
+        <img src="./assets/img/2.png"  />
+        <p class="zw-item-title">绝世唐门绝世唐门绝世唐门</p>
+        <span class="zw-btn zw-btn-default ">下载</span>
+    </div>
+    <div class="zw-item">
+        <img src="./assets/img/2.png" />
+        <p class="zw-item-title">绝世唐门</p>
+        <span class="zw-btn zw-btn-default ">下载</span>
+    </div>
+</div>
+<div class="zw-items  zw-items-3">
+    <div class="zw-item ">
+        <img src="./assets/img/1.png" class="zw-img-square"/>
+        <p class="zw-item-title">绝世唐门</p>
+        <span class="zw-btn zw-btn-default ">下载</span>
+    </div>
+    <div class="zw-item">
+        <img src="./assets/img/2.png" class="zw-img-square"/>
+        <p class="zw-item-title">绝世唐门</p>
+        <span class="zw-btn zw-btn-default ">下载</span>
+    </div>
+    <div class="zw-item">
+        <img src="./assets/img/2.png" class="zw-img-square"/>
+        <p class="zw-item-title">绝世唐门</p>
+        <span class="zw-btn zw-btn-default ">绝世唐门</span>
+    </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<!--grid-->
+<!--
+    <div class="test-grid">
+        <div class="zw-g ">
+            <div class="zw-u-sm-4">
+                <div class="zw-u-sm-2">
+                    2
+                </div>
+                <div class="zw-u-sm-10">10</div>
+            </div>
+            <div class="zw-u-sm-8">8</div>
+        </div>
+
+        <div class="zw-g doc-zw-g">
+            <div class="zw-u-sm-6 zw-u-md-4 zw-u-lg-3">sm-6 md-4 lg-3</div>
+            <div class="zw-u-sm-6 zw-u-md-8 zw-u-lg-9">sm-6 md-8 lg-9</div>
+        </div>
+
+    </div>-->
+
+<!--等分网格-->
+<!--    <ul class="zw-avg-sm-2">
+        <li>1</li>
+        <li>2</li>
+    </ul>-->
+
+<!--帮助类-->
+
+<!--文字大小,颜色-->
+<!--    <div>
+        <p class="zw-text-sm zw-text-primary">primary</p>
+        <p class="zw-text-lg zw-text-success">success</p>
+        <p class="zw-text-sm zw-text-warning">warning</p>
+        <p class="zw-text-xl zw-text-danger">primary</p>
+        <p class="zw-text-xxl zw-text-secondary">primary</p>
+    </div>-->
+
+<!-- 垂直居中 or 垂直底部-->
+<!--    <div class="zw-vertical-align" style="border:1px solid #66b8da;height: 150px;">
+        <span  class="zw-vertical-align-bottom" style="font-size:18px">
+            文字底部对齐
+        </span>
+        <span class="zw-vertical-align-middle zw-radius" style="display: inline-block;width:30px;height:30px;background:chartreuse"></span>
+        <div class="zw-vertical-align-middle">
+            飘在半空中的 XX
+        </div>
+    </div>-->
+</body>
+<script>
+    window.onload = function(){
+        $('.zw-item').each(function(){
+            alert($(this).width())
+        })
+    }
+</script>
+</html>

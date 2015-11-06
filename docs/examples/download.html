@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/zwui.min.css"/>
+    <script type="text/javascript" src="vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/zwui.min.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0}
+        body{
+            background: #F4F4F4;
+            font-size:16px;
+        }
+        .app{
+            margin: 2%;
+        }
+        .app-item{
+            display: -webkit-box;
+            display:    -moz-box;
+            display:         box;
+            display: -ms-flexbox;
+            -webkit-box-pack: justify;
+            -moz-box-pack: justify;
+            -ms-box-pack:justify;
+            box-pack:justify;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            -ms-box-align:center;
+            box-align:center;
+            background: #FFFFFF;
+            padding:10px;
+            border:1px solid #E2E2E2;
+        }
+        .app-item+.app-item{
+            margin-top: 2%;
+
+        }
+        .app-detail{
+            display: -webkit-box;
+            display:    -moz-box;
+            display:         box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display:    -moz-flex;
+            display:     -ms-flex;
+            display:         flex;
+        }
+        .app-detail img{
+            width:60px;
+            margin-right: 10px;
+        }
+        .app-starBar{height:12px;width:60px;background:url(http://a.10086.cn/mmfs/image/27806/27806474.png);background-size:12px 12px;}
+        .app-starBar span{vertical-align:top;display:inline-block;height:12px;background:url(http://a.10086.cn/mmfs/image/27806/27806475.png);background-size:12px 12px;}
+        .app-btn{
+            border:1px solid #E2E2E2;
+            padding:10px 10px;
+            margin:-1px;
+        }
+        a:active{
+            border:1px solid #7DC888;
+            margin:-1px;
+        }
+        a{
+            cursor: pointer;
+            text-decoration: none;
+            color:#000000
+        }
+        .app-item-check{
+            display: -webkit-box;
+            display:    -moz-box;
+            display:         box;
+            display: -ms-flexbox;
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            -ms-box-pack:center;
+            box-pack:center;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+            -ms-box-orient: vertical;
+            box-orient: vertical;
+            padding-right: 20px;
+        }
+        .foot{
+            position:fixed;
+            bottom: 0;
+            left:0;
+            width: 100%;
+            display: -webkit-box;
+            display:    -moz-box;
+            display:         box;
+            display: -ms-flexbox;
+            -webkit-box-pack: justify;
+            -moz-box-pack: justify;
+            -ms-box-pack:justify;
+            box-pack:justify;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            -ms-box-align:center;
+            box-align:center;
+            background: #FFFFFF;
+            padding:5px;
+            height:50px;
+        }
+        .select-all,.cancel-all{
+            font-weight: bold;
+            border: 1px solid #E2E2E2;
+            line-height: 1.6;
+            padding:5px 10px;
+        }
+        .select-all:after{
+            content:'全选'
+        }
+        .cancel-all:after{
+            content:'取消'
+        }
+        .batchdownload{
+            padding:5px 10px;
+            margin-right: 10px;
+            border: 1px solid #E2E2E2;
+        }
+        a.batchdownload:active{
+            padding:5px 10px;
+            margin-right: 10px;
+            border:1px solid #7DC888;
+        }
+    </style>
+</head>
+<body>
+
+<div class='app' data-zw-widget="download">
+    <div class='app-item zw-dl-item'
+         data-url="http://221.179.8.170:8080/t.do?requestid=app_order&payMode=1&goodsid=0000x3902710233760000000204760000000204&MD5=null"
+         data-contentid="760000000204" data-price="免费" data-size="" data-canOrder="true"
+         data-pkgname="com.UCMobile" data-id="com.UCMobile" data-ver="603">
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300008838187" />
+        </div>
+        <a class='app-detail' href="javascript:;">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2015/01/12/a513/231/41231513/logo1120x1201038630752-png8.png"/></div>
+            <div>
+                <div class="name">
+                    UC
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    通话通信
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn js-btn-dl' href="javascript:;" >
+            下载
+        </a>
+    </div>
+    <!--<div class='app-item zw-dl-item'  data-pkgname="com.popcap.pvz2mmhd" id="com.popcap.pvz2mmhd" data-ver="720">
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300008838187" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300008838187)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2015/01/12/a513/231/41231513/logo1120x1201038630752-png8.png"/></div>
+            <div>
+                <div class="name">
+                    UC
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    通话通信
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn js-btn-dl' href="javascript:;" onclick="mm.download(300008838187)">
+            下载
+        </a>
+    </div>
+-->
+<!--    <iframe src="http://127.0.0.1:9817/action=querydownprogress&contentid=http://221.179.8.170:8080/t.do?requestid=app_order&payMode=1&goodsid=0000x3902741386760000081892760000081892&MD5=null" frameborder="0">\
+    </iframe>-->
+
+    <div id="msg"></div>
+<!--
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300008830185" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300008830185)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2015/01/05/a655/109/41109655/logo1120x1200448975096-png8.png"/></div>
+            <div>
+                <div class="name">
+                    凤凰视频
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    新闻资讯
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300008830185)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300001096149" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300001096149)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2015/02/09/a743/905/41905743/logo4null3470946219-png8.png"/></div>
+            <div>
+                <div class="name">
+                    携程旅行
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    旅游出行
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300001096149)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300002584247" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300002584247)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2014/12/31/a615/050/41050615/logo1120x1200015333885-png8.png"/></div>
+            <div>
+                <div class="name">
+                    和彩云
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    商务办公
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300002584247)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300000033601" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300000033601)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2015/01/23/a686/505/41505686/logo16120x1202001741711-png8.png"/></div>
+            <div>
+                <div class="name">
+                    优酷
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    网络视频
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300000033601)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300008402837" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300008402837)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2014/12/25/a318/924/40924318/logo120x1209497960472-png8.png"/></div>
+            <div>
+                <div class="name">
+                    网易新闻
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    新闻资讯
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300008402837)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300001147495" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300001147495)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2014/12/12/a251/655/40655251/logo120x1208369671294-png8.png"/></div>
+            <div>
+                <div class="name">
+                    美图秀秀
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    摄影录像
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300001147495)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300008251939" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300008251939)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2015/07/24/a750/775/44775750/logo140x1407709644015_src.jpg"/></div>
+            <div>
+                <div class="name">
+                    高铁管家
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    旅游出行
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300008251939)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300002780906" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300002780906)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2014/10/08/a693/765/38765693/logo1120x1202760829111-png8.png"/></div>
+            <div>
+                <div class="name">
+                    美颜相机
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    摄影录像
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300002780906)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300000313876" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300000313876)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2015/01/06/a149/137/41137149/logo4null0535936863-png8.png"/></div>
+            <div>
+                <div class="name">
+                    UC浏览器
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    浏览器
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300000313876)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300007446244" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300007446244)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2015/01/28/a496/591/41591496/logo2120x1202413037221-png8.png"/></div>
+            <div>
+                <div class="name">
+                    陌陌
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    社区交友
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300007446244)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300002868019" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300002868019)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2014/12/23/a221/876/40876221/logo1120x1209326119891-png8.png"/></div>
+            <div>
+                <div class="name">
+                    360手机卫士
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    安全防护
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300002868019)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300002470357" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300002470357)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2015/01/06/a945/137/41137945/logo1120x1200537536428-png8.png"/></div>
+            <div>
+                <div class="name">
+                    QQ音乐
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    数字音乐
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300002470357)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300002457498" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300002457498)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res1/21/2013/11/29/a554/139/32139554/e5043783a4afb94699dac5c594fe131a_256_256.png"/></div>
+            <div>
+                <div class="name">
+                    百度
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    生活助手
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300002457498)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300002784578" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300002784578)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2015/01/30/a908/658/41658908/logo10120x1202604050663-png8.png"/></div>
+            <div>
+                <div class="name">
+                    快牙
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    系统工具
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300002784578)">
+            下载
+        </a>
+    </div>
+    <div class='app-item'>
+        <div class='app-item-check'>
+            <input type="checkbox" name="dl"  value="300008838917" />
+        </div>
+        <a class='app-detail' href="javascript:;" onclick="mm.detail(300008838917)">
+            <div><img src="http://u5.mm-img.mmarket.com:80/rs/res2/21/2015/01/23/a135/510/41510135/logo1120x1202008983477-png8.png"/></div>
+            <div>
+                <div class="name">
+                    留学好顾问
+                </div>
+                <div class="app-starBar">
+                    <span style="width:80%"></span>
+                </div>
+                <div class="info">
+                    教育教学
+                    <span></span>
+                </div>
+            </div>
+        </a>
+        <div style="width:4px;"></div>
+        <a class='app-btn' href="javascript:;" onclick="mm.download(300008838917)">
+            下载
+        </a>
+    </div>
+-->
+
+</div>
+</body>
+</html>

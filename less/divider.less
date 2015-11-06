@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Component: divider
+ ============================================================================ */
+@divider-def-color: #bfbfbf;
+@divider-margin:0.2rem;
+.@{ns}divider {
+  height:0;
+  overflow: hidden;
+  border-top: 1px solid @divider-def-color;
+  margin:@divider-margin 0;
+}
+
+.@{ns}divider-dotted{
+  border-style: dotted;
+}
+
+.@{ns}divider-dashed{
+  border-style: dashed;
+}

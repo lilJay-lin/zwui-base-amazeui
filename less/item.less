@@ -1,0 +1,242 @@
+
+
+/* ==========================================================================
+   Component: item
+ ============================================================================ */
+@item-border: @global-border;
+@item-line-height: 1;
+@item-bg: #fff;
+
+@item-title-color: @global-font-color;
+@item-title-size:@font-size-xl;
+@item-title-margin: 0.16rem;
+@item-title-margin-lr:@item-text-margin;
+
+@item-text-size:@font-size-xs;
+@item-text-color: #aaaaaa;
+@item-text-line-height: 1.5;
+@item-text-margin-top:0;
+@item-text-margin-bottom:0.2rem;
+@item-text-margin:0.1rem;
+
+@item-tip-size:@font-size-xs;
+
+@items-3-padding-top:0.17rem;
+@items-3-padding-bottom:0.27rem;
+@items-3-padding:0.1rem;
+
+@items-2-text-margin-top:-0.05rem;//text区域高度修正
+@items-2-padding-top:0.15rem;
+@items-2-padding-bottom:0.35rem;
+@items-2-padding:0.1rem;
+@items-2-btn-size:@font-size-lg;
+@item-2-text-line-height: @item-text-line-height * @item-text-size;
+
+@item-1-height:2.2rem;
+@item-1-padding-top:0.25rem;
+@item-1-title-margin: 0;
+@item-1-tip-margin-top:0.1rem;
+@item-1-tip-margin-bottom:0.06rem;
+@item-1-btn-margin:0.2rem;
+@item-1-logo-margin-left:0.15rem;
+@item-1-border-radius:30%;
+
+.@{ns}items{
+  border: 1px solid @item-border;
+  line-height: @item-line-height;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  background-color:@item-bg;
+
+  //&.@{ns}items-1{
+  //  display: block;
+  //}
+
+}
+
+.@{ns}items + .@{ns}items{
+  margin-top: 0.2rem;
+}
+
+/*
+  不同列item的自定义样式
+*/
+/*
+  以下样式单列有效
+*/
+.@{ns}items-1{
+  flex-direction: column;
+  .@{ns}item{
+      //padding-top:@item-1-padding-top;
+      text-align: left;
+      display: flex;
+      height:@item-1-height;
+  }
+
+  & > .@{ns}item + .@{ns}item{
+    border-top: 1px solid @item-border;
+  }
+
+  & .@{ns}item-title{
+     padding-top:@item-1-padding-top;
+     margin:@item-1-title-margin;
+     line-height: 1.3;
+  }
+  & .@{ns}item-text{
+    -webkit-line-clamp:2;
+    margin-left:0;
+  }
+  & img{
+     margin-top:@item-1-padding-top;
+  }
+  & .@{ns}item-app{
+    margin-left:0.35rem;
+  }
+  & .@{ns}item-video{
+    margin-left:0.15rem;
+  }
+  & .@{ns}item-book{
+    margin-left:0.35rem;
+  }
+
+  & .@{ns}btn-wrap{
+      height:100%;
+      margin:0 @item-1-btn-margin;
+  }
+
+  & .@{ns}btn-wrap:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+.@{ns}item-logo{
+  width:2.1rem;
+}
+.@{ns}item-video{
+  width:1.75rem;
+  height:1.3rem;
+}
+.@{ns}item-book{
+  width:1.3rem;
+  height:1.75rem;
+}
+.@{ns}item-app{
+  border-radius: @item-1-border-radius;
+  width:1.3rem;
+  height:1.3rem;
+}
+
+
+
+.@{ns}item-info{
+  flex:1;
+}
+
+.@{ns}item-tip{
+  color:#777777;
+  font-size:@item-tip-size;
+  margin:@item-1-tip-margin-top 0 @item-1-tip-margin-bottom;
+  & > em{
+    margin-left: 0.25rem;
+    font-style: normal;
+  }
+}
+
+
+
+// 两列
+
+.@{ns}items-2 {
+  & .@{ns}item{
+    flex: 1;
+    width: 50%;
+    text-align: center;
+    display: block;
+    padding:@items-2-padding-top @items-2-padding @items-2-padding-bottom;
+  }
+  & > .@{ns}item +  .@{ns}item{
+    border-left: 1px solid @item-border;
+  }
+
+  & .@{ns}item-text{
+    height: @item-2-text-line-height * 3;
+    margin-top:@items-2-text-margin-top;
+  }
+
+  & .@{ns}img-big{
+    width:3.24rem;
+    height:1.98rem;
+  }
+  & .@{ns}img-square{
+    padding-top:0.07rem;
+    width:1.9rem;
+    height:1.9rem;
+  }
+
+  & .@{ns}btn{
+     //position: absolute;
+     //z-index:2;
+     //bottom:0.35rem;
+     padding:0 1em;
+     height:0.54rem;
+     line-height: 0.54rem;
+     width: 2.6rem;
+     font-size:@items-2-btn-size;
+     //transform: translateX(-50%);
+    .text-overflow('inline-block');
+  }
+}
+
+.@{ns}items-3 {
+  & .@{ns}item{
+      display: block;
+      flex: 1;
+      width: 33.33333%;
+      text-align: center;
+      padding:@items-3-padding-top @items-3-padding @items-3-padding-bottom;
+  }
+  & > .@{ns}item +  .@{ns}item{
+    border-left: 1px solid @item-border;
+  }
+  & .@{ns}img-big{
+    width:2.1rem;
+    height:1.3rem;
+  }
+  & .@{ns}img-square{
+    width:1.2rem;
+    height:1.2rem;
+  }
+}
+
+/*[class*=".@{ns}item"]{
+  text-align: center;
+};*/
+
+.@{ns}item{
+  display:block;
+  position: relative;
+
+  //flex: 1;
+};
+
+.@{ns}item-title{
+  font-size:@item-title-size;
+  color:@item-title-color;
+  margin:@item-title-margin @item-title-margin-lr;
+  vertical-align: middle;
+  .text-overflow();
+}
+
+.@{ns}item-text{
+  font-size: @item-text-size;
+  color: @item-text-color;
+  text-align: left;
+  line-height: @item-text-line-height;
+  margin:@item-text-margin-top @item-text-margin @item-text-margin-bottom;
+  .am-line-clamp(3, @item-text-line-height);
+}
+
+
