@@ -629,7 +629,8 @@ pre,
 address,
 fieldset,
 figure {
-  margin: 0 0 @base-margin-vertical 0;
+  //margin: 0 0 @base-margin-vertical 0;
+  margin:0;
 }
 
 * + p,
@@ -642,7 +643,7 @@ figure {
 * + address,
 * + fieldset,
 * + figure {
-  margin-top: @base-margin-vertical;
+  //margin-top: @base-margin-vertical;
 }
 
 
@@ -655,8 +656,8 @@ h3,
 h4,
 h5,
 h6 {
-  //margin: 0;
-  margin: 0 0 @base-margin-vertical 0;
+  margin: 0;
+  //margin: 0 0 @base-margin-vertical 0;
   font-weight: @base-heading-font-weight;
   font-size: 100%;
 }
@@ -675,7 +676,7 @@ h2 {
 * + h4,
 * + h5,
 * + h6 {
-  margin-top: @base-heading-margin-top;
+  //margin-top: @base-heading-margin-top;
 }
 
 
@@ -693,23 +694,23 @@ ul > li > ul,
 ul > li > ol,
 ol > li > ol,
 ol > li > ul {
-  margin: @base-heading-margin-top/2 0;
+  //margin: @base-heading-margin-top/2 0;
 }
 
 
 /* Description lists */
 dt {
   font-weight: bold;
-  & + dd {
+/*  & + dd {
     margin-top: .5em;
-  }
+  }*/
 }
 
 dd {
   margin-left: 0;
-  & + dt {
+/*  & + dt {
     margin-top: 1em;
-  }
+  }*/
 }
 
 

@@ -2,6 +2,121 @@
    Component: article
    ÎÄÕÂÏêÇéÒ³Ä£°å
    zw-article
+   zw-article-logo
+   zw-article-hd
+   zw-article-bd
    zw-article-title
    zw-article-meta
  ============================================================================ */
+@article-margin: 0.1rem;
+@article-line-height: 1.6;
+
+@article-hd-margin: 0.1rem;
+@article-hd-line-height: @article-line-height;
+@article-hd-text-indent: 0.05rem;
+
+@article-title-line: 2;
+@article-title-font-size: @font-size-xxl;
+@article-title-color: @global-font-color;
+@article-title-line-height: @article-line-height;
+
+@article-divider-margin-top : 0.25rem;
+@article-divider-margin-bottom : 0.35rem;
+
+@article-meta-font-size: @font-size-xs;
+@article-meta-font-color: #999999;
+@article-meta-between-margin: 0.4rem;
+@article-meta-line-height: @article-line-height;
+
+@article-bd-text-indent: 0.1rem;
+@article-bd-line-height: @article-line-height;
+@article-bd-font-size: @global-font-size;
+@article-bd-font-color: @global-text-font-color;
+
+
+@article-bd-tit-font-size: @font-size-xl;
+@article-bd-tit-font-color: #666666;
+@article-bd-tit-line-height: @article-line-height;
+
+.@{ns}article{
+   margin: 0 @article-margin;
+}
+
+.@{ns}article-logo{
+   margin: 0 -@article-margin;
+}
+
+.@{ns}article-hd{
+   overflow: hidden;
+   line-height: @article-hd-line-height;
+   margin: @article-hd-margin 0 @article-hd-margin;
+   & + .@{ns}divider{
+      margin-top: @article-divider-margin-top;
+   }
+}
+
+
+.@{ns}article-title{
+   font-size: @article-title-font-size;
+   color: @article-title-color;
+   margin:0;
+   .am-line-clamp(@article-title-line, @article-title-line-height);
+}
+
+.@{ns}article-meta{
+   font-size: @article-meta-font-size;
+   color: @article-meta-font-color;
+   line-height: @article-meta-line-height;
+   & + & {
+      margin-left: @article-meta-between-margin;
+   }
+}
+
+.@{ns}divider{
+   & + .@{ns}article-bd{
+      margin-top: @article-divider-margin-bottom;
+   }
+}
+
+.@{ns}article-bd{
+   overflow: hidden;
+   margin-bottom: 0.23rem;
+   line-height: @article-hd-line-height;
+
+   & > img:first-child{
+     margin-top: 0.1rem;
+   }
+
+   & > p {
+      font-size: @article-bd-font-size;
+      color: @article-bd-font-color;
+      margin-left: @article-bd-text-indent;
+   }
+
+   & > p +  p{
+      margin-top: 0.45rem;
+   }
+
+   & > img + img{
+      margin-top: 0.1rem;
+   }
+
+   & > p + img,& > img + p{
+      margin-top: 0.4rem;
+   }
+   & > img + h2,& > h2 + img{
+      margin-top: 0.5rem;
+   }
+
+   & > h2 + p,& > p + h2 {
+      margin-top: 0.45rem;
+   }
+
+   h2{
+      font-size:@article-bd-tit-font-size;
+      color:@article-bd-tit-font-color;
+      line-height: @article-bd-tit-line-height;
+      //margin: 0.45rem 0;
+      margin-left: @article-bd-text-indent;
+   }
+}

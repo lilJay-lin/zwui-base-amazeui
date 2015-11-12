@@ -487,19 +487,7 @@ pre,
 address,
 fieldset,
 figure {
-  margin: 0 0 0.16rem 0;
-}
-* + p,
-* + hr,
-* + ul,
-* + ol,
-* + dl,
-* + blockquote,
-* + pre,
-* + address,
-* + fieldset,
-* + figure {
-  margin-top: 0.16rem;
+  margin: 0;
 }
 /* Headings
    ========================================================================== */
@@ -509,7 +497,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 0.16rem 0;
+  margin: 0;
   font-weight: 600;
   font-size: 100%;
 }
@@ -519,38 +507,24 @@ h1 {
 h2 {
   font-size: 1.25em;
 }
-* + h1,
-* + h2,
-* + h3,
-* + h4,
-* + h5,
-* + h6 {
-  margin-top: 2em;
-}
 /* Ordered and unordered lists */
 ul,
 ol {
   padding-left: 2em;
 }
 /* Reset margin for nested lists */
-ul > li > ul,
-ul > li > ol,
-ol > li > ol,
-ol > li > ul {
-  margin: 1em 0;
-}
 /* Description lists */
 dt {
   font-weight: bold;
-}
-dt + dd {
-  margin-top: .5em;
+  /*  & + dd {
+    margin-top: .5em;
+  }*/
 }
 dd {
   margin-left: 0;
-}
-dd + dt {
-  margin-top: 1em;
+  /*  & + dt {
+    margin-top: 1em;
+  }*/
 }
 /**
  * Horizontal rule
@@ -1581,6 +1555,89 @@ input[type="button"].zw-btn-block {
   line-height: 1.5;
 }
 /* ==========================================================================
+   Component: article
+   ��������ҳģ��
+   zw-article
+   zw-article-logo
+   zw-article-hd
+   zw-article-bd
+   zw-article-title
+   zw-article-meta
+ ============================================================================ */
+.zw-article {
+  margin: 0 0.1rem;
+}
+.zw-article-logo {
+  margin: 0 -0.1rem;
+}
+.zw-article-hd {
+  overflow: hidden;
+  line-height: 1.6;
+  margin: 0.1rem 0 0.1rem;
+}
+.zw-article-hd + .zw-divider {
+  margin-top: 0.25rem;
+}
+.zw-article-title {
+  font-size: 0.34rem;
+  color: #333333;
+  margin: 0;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  line-height: 1.6;
+}
+.zw-article-meta {
+  font-size: 0.22rem;
+  color: #999999;
+  line-height: 1.6;
+}
+.zw-article-meta + .zw-article-meta {
+  margin-left: 0.4rem;
+}
+.zw-divider + .zw-article-bd {
+  margin-top: 0.35rem;
+}
+.zw-article-bd {
+  overflow: hidden;
+  margin-bottom: 0.23rem;
+  line-height: 1.6;
+}
+.zw-article-bd > img:first-child {
+  margin-top: 0.1rem;
+}
+.zw-article-bd > p {
+  font-size: 0.26rem;
+  color: #666666;
+  margin-left: 0.1rem;
+}
+.zw-article-bd > p + p {
+  margin-top: 0.45rem;
+}
+.zw-article-bd > img + img {
+  margin-top: 0.1rem;
+}
+.zw-article-bd > p + img,
+.zw-article-bd > img + p {
+  margin-top: 0.4rem;
+}
+.zw-article-bd > img + h2,
+.zw-article-bd > h2 + img {
+  margin-top: 0.5rem;
+}
+.zw-article-bd > h2 + p,
+.zw-article-bd > p + h2 {
+  margin-top: 0.45rem;
+}
+.zw-article-bd h2 {
+  font-size: 0.3rem;
+  color: #666666;
+  line-height: 1.6;
+  margin-left: 0.1rem;
+}
+/* ==========================================================================
    Component: Tabs Plugin
  ============================================================================ */
 .zw-tabs {
@@ -1801,6 +1858,138 @@ input[type="button"].zw-btn-block {
 }
 .zw-scroll-item {
   position: relative;
+}
+/* ==========================================================================
+   Component: lottery
+ ============================================================================ */
+.zw-lottery {
+  width: 5.57rem;
+  height: 3.57rem;
+  margin: 0 auto;
+  background: url("../image/14.png") 0 0 no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+  overflow: hidden;
+}
+.zw-lottery-box {
+  position: relative;
+  width: 4.57rem;
+  height: 1.68rem;
+  margin: 0.55rem 0 0 0.52rem;
+}
+.zw-lottery-box canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.1rem;
+}
+.zw-lottery-again,
+.zw-lottery-award {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.1rem;
+  background-color: #feeb47;
+  color: #df5a00;
+  font-size: 0.34rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.zw-lottery-again:before,
+.zw-lottery-award:before {
+  display: inline-block;
+  content: '';
+  height: 100%;
+  vertical-align: middle;
+}
+.zw-lottery-info {
+  margin-top: 0.6rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.26rem;
+}
+.zw-lottery-times {
+  color: #ffe93b;
+}
+/* ==========================================================================
+   Component: slot �齱ת��
+ ============================================================================ */
+/* ==========================================================================
+   Component: rotary ת�̳齱
+ ============================================================================ */
+.zw-rotary {
+  width: 5.58rem;
+  height: 7.35rem;
+  margin: 0 auto;
+  background: url("../image/15.png") 0 0 no-repeat;
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+  overflow: hidden;
+}
+.zw-rotary-box {
+  position: relative;
+  width: 4.8rem;
+  height: 4.83rem;
+  margin: 0.38rem;
+}
+.zw-rotary-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.41rem;
+  margin-top: -1.05rem;
+  width: 0.82rem;
+  height: 1.4rem;
+}
+.zw-rotary-info {
+  padding-top: 0.15rem;
+  padding-bottom: 0.1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.26rem;
+}
+.zw-rotary-times {
+  color: #ffe93b;
+}
+.zw-rotary-dial {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transition-property: -webkit-transform;
+          transition-property: transform;
+  -webkit-transition-timing-function: cubic-besizer(0.43, 1.18, 0.53, 0.36);
+          transition-timing-function: cubic-besizer(0.43, 1.18, 0.53, 0.36);
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+.zw-rotary-btn {
+  width: 4.83rem;
+  height: 0.9rem;
+  padding-bottom: 0.1rem;
+  line-height: 0.8rem;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: center;
+  color: #df5a00;
+  font-size: 0.34rem;
+  font-weight: bold;
+  background: url("../image/18.png") no-repeat;
+  -webkit-background-size: 100% auto;
+          background-size: 100% auto;
+  background-position: 0 100%;
+  overflow: hidden;
+}
+.zw-rotary-btn.disable {
+  color: #9b9b9b;
+  background-position: 0 0;
 }
 /* ==========================================================================
    Component: Utility

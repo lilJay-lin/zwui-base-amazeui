@@ -16,19 +16,47 @@
     <script src="assets/js/zwui.min.js"></script>
 </head>
 <body>
+<!--
+    img ： 图片高度尺寸可自己调整 data-scale="{radio: 0.4847 }"， radio = 高/宽，不加次设置height = auto
+    zw-article-logo 文字图片logo无边距，高度可调
+    zw-article-hd 标题区域
+    zw-article-title:最多两行，多余移除截取
+    zw-article-meta ：元数据，两个元数据之间距离为40px
+
+    zw-divider : 可需要改样式： zw-divider-dashed zw-divider-dotted,默认为实线
+
+    zw-article-bd：内容区域
+
+    //以下距离为大约尺寸，按720算，手机中会按实际屏幕缩放,以下元素都可以灵活调换顺序
+    p 文字内容端，两段之间距离 60px
+    p + img : 间隔为45px
+    img + img : 间隔为10px
+    h2 + p : 间隔为60
+-->
     <div class="zw-article">
+        <div class="zw-article-logo">
+            <img src="assets/img/10.png" data-zw-widget="imagescale" data-scale="{radio: 0.4847 }" alt=""/>
+        </div>
         <div class="zw-article-hd">
-            <h1 class="am-article-title"></h1>
+            <h1 class="zw-article-title">乐视网前三季度净利3.77亿元 同比增73%</h1>
             <p>
-                <span class="am-article-meta"></span>
-                <span class="am-article-meta"></span>
-                <span class="am-article-meta"></span>
+                <span class="zw-article-meta">2015-10-27</span>
+                <span class="zw-article-meta">14:34:41</span>
+                <span class="zw-article-meta">来源: 网易科技报道</span>
             </p>
         </div>
-        <hr class="zw-divider"/>
+        <hr class="zw-divider zw-divider-dashed"/>
         <div class="zw-article-bd">
-
-            <p></p>
+            <p>网易科技 10月27日消息，乐视网（300104）发布2015年三季度报告。报告显示，乐视网前三季度实现营收837,497.43万元，同比增长76.50%；净利润为37,704.77万元，同比增长72.84%。</p>
+            <p>报告还显示，前三季度乐视网实现广告业务收入174,930.28万元，同比增长54.84%。终端业务收入403,558.44万元，同比增长101.94%。</p>
+            <p>异曲同工，MONO 2.0 最近也新增了一个类似的特性：默认下拉刷新，在下拉 hold 状态下左右滑动即可切换不同操作，从左到右依次为「玩个游戏、看个文章、刷新、看个视频、听首歌」，具体效果见下 GIF 图。</p>
+            <img src="assets/img/11.png" data-zw-widget="imagescale" data-scale="{radio: 0.4847 }" alt=""/>
+            <h2>具体业务状况摘要如下：</h2>
+            <p>1：截至2015年9月30日，乐视网网站的日均uv（独立访问用户）约5300万，峰值接近9000万，vv日均2.9亿，峰值3.6亿。乐视云视频开放平台CDN节点全球覆盖超过650个物理带宽总储备约10T。</p>
+            <p>2：在内容资源方面，基于“大剧看乐视”的基础上，在自制、体育、综艺等多个重要垂直领域布局。公司采取电视剧、电影、综艺、动漫、音乐等全方位内容品类的覆盖，外部采购、内部自制创作相结合的策略，报告期内，《小时代4-灵魂尽头》、《何以笙箫默》、《九层妖塔》，乐视体育独家版权赛事直播等实现了日均UV增长。在自制方面，乐视网自制综艺“版权+自制”双管齐下，报告期内推出的自制剧《拐个皇帝回现代》、自制综艺《十周嫁出去》等取得良好口碑和广告效益。</p>
+            <p>3：乐视TV•超级电视完成产能爬坡。2015年9月19日，超级电视单日销售38.2万台。9月24日公司推出第三代超级电视六款新品X40、X43、X50、X55、Max65、Max70。</p>
+            <img src="assets/img/12.png" data-zw-widget="imagescale" data-scale="{radio: 0.4847 }" alt=""/>
+            <img src="assets/img/13.png" data-zw-widget="imagescale" data-scale="{radio: 0.4847 }"data-zw-widget="imagescale" data-scale="{radio: 0.4847 }" alt=""/>
         </div>
     </div>
 </body>

@@ -26,7 +26,7 @@ Slider.staticMap = {
 
 Slider.prototype.configMap = {
     direction: 'horizontal', //滑动方向
-    animateTime: 400, //动画时间
+    animateTime: 200, //动画时间
     auto: true, //自动播放
     autoDuration: 2000, //自动播放间隔时间
     defaultActiveIndex: null, //从1开始， max : length

@@ -15,13 +15,13 @@ function scale($el, radio){
     if(/%/g.test(w)){
         var parent = $el.parent();
         if(parent.length > 0){
-            w = parent.width();
+            w = window.getComputedStyle(parent[0]).width;
         }
-    }else{
-        w = parseFloat(w, 10);
     }
 
-	$el.height(w * radio);
+    w = parseFloat(w, 10);
+
+	!isNaN(w) && $el.height(w * radio);
 }
 
 var Plugin = function(){
