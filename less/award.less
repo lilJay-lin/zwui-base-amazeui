@@ -1,0 +1,34 @@
+/* ==========================================================================
+   抽奖模块展示结果使用
+ ============================================================================ */
+
+@award-title-font-size: @font-size-xxxl;
+@award-info-font-size: @global-font-size;
+
+.@{ns}award{
+  overflow: hidden;
+  width: 5.57rem;
+  height: 4.47rem;
+
+  background: url("../image/20.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+.@{ns}award-title{
+  font-size: @award-title-font-size;
+  color:#fc8d01;
+  line-height: 1.5;
+  margin: 0.35rem 0.6rem 0;
+  text-align: center;
+
+  .text-overflow();
+}
+
+.@{ns}award-info{
+  margin: 0.2rem 0.6rem;
+  font-size: @award-info-font-size;
+  color: #ea4f3f;
+  line-height: 1.3;
+  height: 1.8rem;
+  overflow-y: auto;
+}

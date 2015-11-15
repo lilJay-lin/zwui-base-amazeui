@@ -1,0 +1,365 @@
+// Name:            Tabs
+//
+// =============================================================================
+
+@slot-box-height: 1.72rem;
+@slot-card-height: @slot-box-height;
+
+
+.@{ns}slot{
+  overflow: hidden;
+  width: 6.39rem;
+  height: 4.37rem;
+
+  background: url("../image/19.png") 0 0 no-repeat;
+  background-size: 100% 100%;
+
+}
+
+.@{ns}slot-box{
+  overflow: hidden;
+  display: flex;
+
+  width: 4.6rem;
+  height: 1.72rem;
+  margin:0.53rem auto 0;
+  border-radius: 0.1rem;
+}
+
+.@{ns}slot-cards-wrapper{
+  width: 100%;
+  height: 100%;
+  //overflow: hidden;
+  flex:1;
+  background: #e5e5e5;
+  & + & {
+    margin-left: 0.1rem;
+  }
+}
+
+.@{ns}slot-cards{
+  width: 100%;
+  padding:0;
+  margin:0;
+  list-style-type: none;
+  color:#973100;
+
+  //animation-name: slot9;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-play-state: paused;
+  animation-direction: normal;
+  //animation-fill-mode: forwards;
+  //transform: translate3d(0, -@slot-card-height * 5, 0);
+
+  & > li{
+    height: @slot-card-height;
+    line-height: @slot-card-height;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1rem;
+    color: #973100;
+  }
+
+  &.animate{
+      animation-play-state: running;
+  }
+
+/*  &.first{
+    animation-delay: 0.2s;
+  }
+  &.second{
+    animation-delay: 1.2s;
+  }
+  &.third{
+    animation-delay: 2.2s;
+  }*/
+}
+
+@slot-card-count: 9;
+@slot-card-begin: -@slot-card-height * @slot-card-count;
+
+@slot-card-end2 : -@slot-card-height * 1;
+@slot-card-end3 : -@slot-card-height * 2;
+@slot-card-end4 : -@slot-card-height * 3;
+@slot-card-end5 : -@slot-card-height * 4;
+@slot-card-end6 : -@slot-card-height * 5;
+@slot-card-end7 : -@slot-card-height * 6;
+@slot-card-end8 : -@slot-card-height * 7;
+@slot-card-end9 : -@slot-card-height * 8;
+@slot-card-end10 : -@slot-card-height * 9;
+
+/*@slot-card-start1 : -@slot-card-height * 1;
+@slot-card-start2 : -@slot-card-height * 2;
+@slot-card-start3 : -@slot-card-height * 3;
+@slot-card-start4 : -@slot-card-height * 4;
+@slot-card-start5 : -@slot-card-height * 5;
+@slot-card-start6 : -@slot-card-height * 6;
+@slot-card-start7 : -@slot-card-height * 7;
+@slot-card-start8 : -@slot-card-height * 8;
+@slot-card-start9 : -@slot-card-height * 9;*/
+
+@keyframes slot1 {
+  0%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+  30%{
+    transform: translate3d(0px, 0px, 0px);
+  }
+  30.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  60% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  60.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  90% {
+    transform: translate3d(0px, @slot-card-end2  , 0px);
+  }
+
+  100% {
+    transform: translate3d(0px, 0, 0px);
+  }
+}
+
+
+@keyframes slot2 {
+  0%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+  30%{
+    transform: translate3d(0px, 0px, 0px);
+  }
+  30.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  60% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  60.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  90% {
+    transform: translate3d(0px, @slot-card-end3  , 0px);
+  }
+
+  100% {
+    transform: translate3d(0px, @slot-card-end2, 0px);
+  }
+}
+
+
+@keyframes slot3 {
+  0%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+  30%{
+    transform: translate3d(0px, 0px, 0px);
+  }
+  30.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  60% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  60.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  90% {
+    transform: translate3d(0px, @slot-card-end4  , 0px);
+  }
+
+  100% {
+    transform: translate3d(0px, @slot-card-end3, 0px);
+  }
+}
+
+
+@keyframes slot4 {
+  0%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+  35%{
+    transform: translate3d(0px, 0px, 0px);
+  }
+  35.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  70% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  70.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  90% {
+    transform: translate3d(0px, @slot-card-end5  , 0px);
+  }
+
+  100% {
+    transform: translate3d(0px, @slot-card-end4, 0px);
+  }
+}
+
+
+@keyframes slot5 {
+
+  0%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+  35%{
+    transform: translate3d(0px, 0px, 0px);
+  }
+  35.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  70% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  70.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  90% {
+    transform: translate3d(0px, @slot-card-end6  , 0px);
+  }
+
+  100% {
+    transform: translate3d(0px, @slot-card-end5, 0px);
+  }
+}
+
+
+@keyframes slot6 {
+
+  0%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+  35%{
+    transform: translate3d(0px, 0px, 0px);
+  }
+  35.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  70% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  70.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  90% {
+    transform: translate3d(0px, @slot-card-end7  , 0px);
+  }
+
+  100% {
+    transform: translate3d(0px, @slot-card-end6, 0px);
+  }
+}
+
+
+@keyframes slot7 {
+
+  0%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+  40%{
+    transform: translate3d(0px, 0px, 0px);
+  }
+  40.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  80% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  80.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  90% {
+    transform: translate3d(0px, @slot-card-end8  , 0px);
+  }
+
+  100% {
+    transform: translate3d(0px, @slot-card-end7, 0px);
+  }
+}
+
+
+@keyframes slot8 {
+  0%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+  40%{
+    transform: translate3d(0px, 0px, 0px);
+  }
+  40.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  80% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  80.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  90% {
+    transform: translate3d(0px, @slot-card-end9  , 0px);
+  }
+
+  100% {
+    transform: translate3d(0px, @slot-card-end8, 0px);
+  }
+}
+
+
+@keyframes slot9 {
+
+  0%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+  42.5%{
+    transform: translate3d(0px, 0px, 0px);
+  }
+  42.6%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  85% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  85.1%{
+    transform: translate3d(0px, @slot-card-begin, 0px);
+  }
+
+  //90% {
+  //  transform: translate3d(0px, @slot-card-start9  , 0px);
+  //}
+
+  100% {
+    transform: translate3d(0px, @slot-card-end9, 0px);
+  }
+}

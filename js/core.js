@@ -46,6 +46,27 @@ UI.support.transition = (function() {
     return transitionEnd && {end: transitionEnd};
 })();
 
+UI.support.animation = (function() {
+    var animationEnd = (function() {
+        var element = doc.body || doc.documentElement;
+        var animEndEventNames = {
+            WebkitAnimation: 'webkitAnimationEnd',
+            MozAnimation: 'animationend',
+            OAnimation: 'oAnimationEnd oanimationend',
+            animation: 'animationend'
+        };
+
+        for (var name in animEndEventNames) {
+            if (element.style[name] !== undefined) {
+                return animEndEventNames[name];
+            }
+        }
+    })();
+
+    return animationEnd && {end: animationEnd};
+})();
+
+
 UI.utils = {};
 /* jshint -W054 */
 UI.utils.parseOptions = UI.utils.options = function(string) {

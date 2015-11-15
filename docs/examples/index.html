@@ -292,7 +292,7 @@
     <br/>
     <p>========抽奖模块======</p>
 
-    <div class="zw-lottery">
+<!--    <div class="zw-lottery">
         <div class="zw-lottery-box">
             <div class="zw-lottery-again">
                 <span class="zw-lottery-text">木有中奖，再来一次</span>
@@ -322,49 +322,98 @@
         <div class="zw-rotary-btn ">
             碰碰运气
         </div>
+    </div>-->
+    <br/>
+
+    <div class="zw-slot">
+        <div class="zw-slot-box">
+            <div class="zw-slot-cards-wrapper">
+                <ul class="zw-slot-cards">
+                    <li data-index="1">1</li>
+                    <li data-index="2">2</li>
+                    <li data-index="3">3</li>
+                    <li data-index="4">4</li>
+                    <li data-index="5">5</li>
+                    <li data-index="6">6</li>
+                    <li data-index="7">7</li>
+                    <li data-index="8">8</li>
+                    <li data-index="9">9</li>
+                    <li data-index="1">1</li>
+                </ul>
+            </div>
+            <div class="zw-slot-cards-wrapper">
+                <ul class="zw-slot-cards">
+                    <li data-index="1">1</li>
+                    <li data-index="2">2</li>
+                    <li data-index="3">3</li>
+                    <li data-index="4">4</li>
+                    <li data-index="5">5</li>
+                    <li data-index="6">6</li>
+                    <li data-index="7">7</li>
+                    <li data-index="8">8</li>
+                    <li data-index="9">9</li>
+                    <li data-index="1">1</li>
+                </ul>
+            </div>
+            <div class="zw-slot-cards-wrapper">
+                <ul class="zw-slot-cards">
+                    <li data-index="1">1</li>
+                    <li data-index="2">2</li>
+                    <li data-index="3">3</li>
+                    <li data-index="4">4</li>
+                    <li data-index="5">5</li>
+                    <li data-index="6">6</li>
+                    <li data-index="7">7</li>
+                    <li data-index="8">8</li>
+                    <li data-index="9">9</li>
+                    <li data-index="1">1</li>
+                </ul>
+            </div>
+        </div>
+        <div class="zw-slot-info">
+            有<span class="zw-slot-times">N</span>次刮奖机会
+        </div>
+        <div class="zw-slot-btn ">
+            碰碰运气
+        </div>
     </div>
+    <br/>
+
+    <div class="zw-award-mask">
+        <div class="zw-award">
+            <div class="zw-award-title">
+                恭喜
+            </div>
+            <div class="zw-award-info">
+                恭喜获得岛国三日游
+            </div>
+            <div class="zw-award-btn">
+
+            </div>
+        </div>
+    </div>
+
     <br/>
 </body>
 <script>
 
     $(function(){
-        var lottery = new $.ZWUI.lottery('.zw-lottery',{
-            award: 'thanks'
-        });
-
-        /*
-         绑定显示奖品事件，刮刮卡结束的时候会调用
-         @param e {event}
-         @param award {string} 设置的奖品
-
-         可根据奖品做自定义事件
-         */
-        lottery.on('gameover', function(e, award){
-            console.log(award);
-        });
-
-        /*
-         开始刮卡如需要做其他处理，可绑定startgame事件;
-         一次刮卡流程只调用一次
-         */
-        lottery.on('startgame', function(e, award){
-            console.log('i am start');
-        });
-
-        //setAward 设置奖品，触发刮刮卡重新初始化
-        // lottery.setAward('1')
-
-
-        //======================大转盘
-        var rotary = new $.ZWUI.rotary('.zw-rotary',{
-            awards: ''
-        });
 
     });
 </script>
 <script>
     window.onload = function(){
 
+        var slot = new $.ZWUI.slot(".zw-slot");
+        //一次抽奖结束时调用，可以做结果提示操作，a为抽奖结果
+        slot.on('gameover',function(e, a){
+            console.log(a);
+        });
+
+        //点击开始抽奖时调用，可以发送请求获取此次抽奖结果，slot.slot设置抽奖结果
+        slot.on('gamestart',function(e){
+            slot.slot("2/5/9");
+        });
 
 /*        var $dummy, root = null;
         if(!root){

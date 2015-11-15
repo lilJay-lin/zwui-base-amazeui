@@ -8,11 +8,11 @@ var fs = require('fs');
 var format = require('util').format;
 var _ = require('lodash');
 var browserify = require('browserify');
-var watchify = require('watchify');
-var collapser = require('bundle-collapser/plugin');
-var derequire = require('derequire/plugin');
+//var watchify = require('watchify');
+//var collapser = require('bundle-collapser/plugin');
+//var derequire = require('derequire/plugin');
 var del = require('del');
-var bistre = require('bistre');
+//var bistre = require('bistre');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 
