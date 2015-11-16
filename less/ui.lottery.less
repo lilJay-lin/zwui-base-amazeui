@@ -1,0 +1,77 @@
+
+/* ==========================================================================
+   Component: lottery
+ ============================================================================ */
+//@lottery-bg-color: #f26201;
+@lottery-box-radius: 0.1rem;
+@lottery-box-inner-bg: #feeb47;
+@lottery-box-inner-color: #df5a00;
+@lottery-box-inner-font-size: 0.34rem;
+
+@lottery-index: 0;
+@lottery-canvas-bg: #979797;
+
+.@{ns}lottery{
+  width: 5.57rem;
+  height: 3.57rem;
+  margin:0 auto;
+  background: url("../image/14.png")  0 0 no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  //border-radius:@lottery-border-radius;
+}
+
+.@{ns}lottery-box{
+  position: relative;
+  width: 4.57rem;
+  height: 1.68rem;
+  //border-radius: @lottery-box-radius;
+  margin:0.55rem 0 0 0.52rem;
+  //background: @lottery-box-bg;
+  & canvas{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: @lottery-index + 1;
+    width: 100%;
+    height: 100%;
+    //border: 1px solid red;
+    border-radius: @lottery-box-radius;
+    //background: @lottery-canvas-bg
+  }
+}
+
+.@{ns}lottery-again,.@{ns}lottery-award{
+  visibility: hidden;
+  position: absolute;
+  z-index: @lottery-index + 1;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border-radius: @lottery-box-radius;
+  background-color:@lottery-box-inner-bg;
+  color: @lottery-box-inner-color;
+  font-size: @lottery-box-inner-font-size;
+  text-align: center;
+  vertical-align: middle;
+
+  &:before{
+    display: inline-block;
+    content: '';
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.@{ns}lottery-info{
+  margin-top: 0.6rem;
+  text-align: center;
+  color:#fff;
+  font-size: 0.26rem;
+}
+
+.@{ns}lottery-times{
+  color: #ffe93b;
+}
+

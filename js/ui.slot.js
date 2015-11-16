@@ -30,11 +30,11 @@ Slot.staticMap = {
 };
 
 /*
-    awards: {
-        1: '7/7/7',
-        2: '3/3/3',
-        3: '4/2/8
-    }
+ awards: {
+ 1: '7/7/7',
+ 2: '3/3/3',
+ 3: '4/2/8
+ }
 
  */
 Slot.prototype.configMap = {
@@ -43,6 +43,7 @@ Slot.prototype.configMap = {
 
 Slot.prototype.stateMap = {
     award: '', //结果
+    disable: false, //是否可抽奖
     $cards: null,
     $btn: null,
     length: 0,
@@ -126,7 +127,7 @@ Slot.prototype.addEvent = function(){
 };
 
 /*
-    校验游戏是否结束，结束触发结束事件
+ 校验游戏是否结束，结束触发结束事件
 
  */
 Slot.prototype.gameover  = function(){
@@ -141,22 +142,31 @@ Slot.prototype.gameover  = function(){
 
     if(overCount === len){
         state.overCount = 0;
-        state.$btn.removeClass(Slot.staticMap.disable);
+        me.disable(false);
         me.$el.trigger('gameover', [state.award]);
     }
 
 };
 
 Slot.prototype.gamestart = function(award){
-    var $btn =this.stateMap.$btn,
-        disable = Slot.staticMap.disable;
-    if($btn.hasClass(disable)){
+    var me = this,
+        $btn =me.stateMap.$btn,
+        disable = me.stateMap.disable;
+    if(disable){
         return ;
     }
 
-    $btn.addClass(disable);
+    me.disable(true);
 
-    this.$el.trigger('gamestart');
+    me.$el.trigger('gamestart');
+};
+
+Slot.prototype.disable = function(disable){
+    var me = this,
+        disableClass = Slot.staticMap.disable;
+    me.stateMap.disable = !!disable;
+
+    !!disable ? me.stateMap.$btn.addClass(disableClass) : me.stateMap.$btn.removeClass(disableClass);
 };
 
 Slot.prototype.on = function(){
@@ -166,8 +176,8 @@ Slot.prototype.on = function(){
 
 
 /*
-    开始抽奖
-    @slots {string} 结果字符串 '7/7/7'
+ 开始抽奖
+ @slots {string} 结果字符串 '7/7/7'
 
  */
 Slot.prototype.slot = function(award){
@@ -239,13 +249,13 @@ Slot.prototype.beforeSlot = function(){
         $(this).removeClass(Slot.staticMap.animate)
             .css(state.transform,"translate3d(0, 0, 0)")
             .css(
-                {
-                    "animation-name": '',
-                    "-webkit-animation-name": '',
-                    "-o-animation-name": '',
-                    "-moz-animation-name": ''
-                }
-            );
+            {
+                "animation-name": '',
+                "-webkit-animation-name": '',
+                "-o-animation-name": '',
+                "-moz-animation-name": ''
+            }
+        );
     });
 }
 

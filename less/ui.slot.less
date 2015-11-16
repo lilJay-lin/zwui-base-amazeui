@@ -8,6 +8,7 @@
 
 .@{ns}slot{
   overflow: hidden;
+  margin:0 auto;
   width: 6.39rem;
   height: 4.37rem;
 
@@ -361,5 +362,38 @@
 
   100% {
     transform: translate3d(0px, @slot-card-end9, 0px);
+  }
+}
+
+.@{ns}slot-info{
+  margin: 0.45rem auto 0.rem;
+  text-align: center;
+  color:#fff;
+  font-size: 0.26rem;
+}
+
+.@{ns}slot-times{
+  color: #ffe93b;
+}
+
+.@{ns}slot-btn{
+  width: 4.83rem;
+  height: 0.9rem;
+  padding-bottom: 0.1rem;
+  line-height: 0.8rem;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: center;
+  color: #df5a00;
+  font-size:0.34rem;
+  font-weight: bold;
+  background: url("../image/18.png") no-repeat;
+  background-size: 100% auto;
+  background-position: 0 100%;
+  overflow: hidden;
+
+  &.disable{
+    color:#9b9b9b;
+    background-position: 0 0;
   }
 }

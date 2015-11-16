@@ -30,7 +30,8 @@ var pkg = require('./package.json');
 var config = {
     path: {
         less: [
-            './less/zwui.less',
+            './less/mm.less',
+            './less/migu.less',
             //'./less/themes/flat/amazeui.flat.less'
         ],
         js:[

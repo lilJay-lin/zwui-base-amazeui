@@ -28,7 +28,8 @@ Scroll.prototype.configMap = {
     百分比 ，设为viewport的百分比宽度*/
     width: 0,
     //毛玻璃效果宽度//单位rem
-    filterWidth: 0,
+    filterRightWidth: 0,
+    filterLeftWidth: 0,
     radio: 0.5 //触摸滑动距离因子
 };
 
@@ -128,7 +129,7 @@ Scroll.prototype.create = function(){
             水平滑动，向左滑动最大为 - 水平宽度
             向右滑动最大为 0
          */
-        var max = len * width + me.configMap.filterWidth * me.getRootSize();
+        var max = len * width + (me.configMap.filterRightWidth + me.configMap.filterLeftWidth) * me.getRootSize();
         //不满一屏不允许滑动，minTransform设置为0
         stateMap.minTransform = - ( max > viewportWidth ? max - viewportWidth : 0);
         //console.log(stateMap.minTransform)

@@ -835,11 +835,13 @@
   &:focus {
     background-color: darken(@background, 7%);
   }*/
-
+  &:hover,
+  &:focus,
   &:active,
   &.@{ns}active,
   .@{ns}active &.@{ns}dropdown-toggle {
     background-image: none;
+    color: @color;
     background-color: darken(@background, 14%);
   }
 

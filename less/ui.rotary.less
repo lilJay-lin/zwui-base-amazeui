@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Component: rotary ת�̳齱
+ ============================================================================ */
+
+.@{ns}rotary{
+  width: 5.58rem;
+  height: 7.35rem;
+  margin: 0 auto;
+  background: url("../image/15.png")  0 0 no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+.@{ns}rotary-box{
+  position: relative;
+  width: 4.8rem;
+  height: 4.83rem;
+  margin: 0.38rem;
+}
+
+.@{ns}rotary-indicator{
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-left: -0.41rem;
+  margin-top: -1rem;
+  width: 0.82rem;
+  height: 1.4rem;
+}
+
+.@{ns}rotary-info{
+  padding-top: 0.15rem;
+  padding-bottom: 0.1rem;
+  text-align: center;
+  color:#fff;
+  font-size: 0.26rem;
+}
+
+.@{ns}rotary-times{
+  color: #ffe93b;
+}
+
+.@{ns}rotary-dial{
+  backface-visibility: hidden;
+  transition-delay: 0.2s;
+  transition-property: transform;
+  transition-timing-function: cubic-besizer(.43,1.18,.53,.36);
+  transition-duration: 2s;
+}
+
+.@{ns}rotary-btn{
+  width: 4.83rem;
+  height: 0.9rem;
+  padding-bottom: 0.1rem;
+  line-height: 0.8rem;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: center;
+  color: #df5a00;
+  font-size:0.34rem;
+  font-weight: bold;
+  background: url("../image/18.png") no-repeat;
+  background-size: 100% auto;
+  background-position: 0 100%;
+  overflow: hidden;
+
+  &.disable{
+    color:#9b9b9b;
+    background-position: 0 0;
+  }
+}
